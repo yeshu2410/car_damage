@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: collision-parts-inference-service
+  labels:
+    app: collision-parts-inference
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8000
+    protocol: TCP
+    name: http
+  selector:
+    app: collision-parts-inference
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: collision-parts-inference-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+  - hosts:
+    - api.collision-parts.example.com
+    secretName: collision-parts-tls
+  rules:
+  - host: api.collision-parts.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: collision-parts-inference-service
+            port:
+              number: 80
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: model-storage-pvc
+spec:
+  accessModes:
+    - ReadOnlyMany
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: fast-ssd

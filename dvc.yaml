@@ -1,0 +1,309 @@
+# DVC Pipeline for Collision Parts Prediction
+# Defines the complete ML pipeline from data preparation to model evaluation
+
+stages:
+  # Stage 1: Data Preparation
+  prepare_data:
+    cmd: python src/data/prepare_no_damage.py
+    deps:
+      - src/data/prepare_no_damage.py
+      - configs/data.yaml
+    outs:
+      - data/processed/no_damage_annotations.json
+    params:
+      - data.raw_dir
+      - data.processed_dir
+    desc: "Prepare no-damage annotations from VEHiDe dataset"
+
+  # Stage 2: Merge Annotations
+  merge_annotations:
+    cmd: python src/data/merge_annotations.py
+    deps:
+      - src/data/merge_annotations.py
+      - data/processed/no_damage_annotations.json
+      - configs/data.yaml
+    outs:
+      - data/processed/merged_annotations.json
+    params:
+      - data.damage_annotations_path
+      - data.processed_dir
+    desc: "Merge damage and no-damage annotations"
+
+  # Stage 3: Convert to YOLO Format
+  convert_to_yolo:
+    cmd: python src/data/to_yolo.py
+    deps:
+      - src/data/to_yolo.py
+      - data/processed/merged_annotations.json
+      - configs/data.yaml
+    outs:
+      - data/yolo/
+    params:
+      - data.yolo_dir
+      - data.image_size
+    desc: "Convert annotations to YOLO format"
+
+  # Stage 4: Train ResNet Model
+  train_resnet:
+    cmd: python src/training/train_resnet.py
+    deps:
+      - src/training/train_resnet.py
+      - src/models/damage_net.py
+      - src/data/dataset.py
+      - data/processed/merged_annotations.json
+      - configs/train_resnet.yaml
+    outs:
+      - models/resnet/
+    params:
+      - train.epochs
+      - train.batch_size
+      - train.learning_rate
+      - model.name
+    metrics:
+      - logs/mlflow/resnet/metrics.json
+    desc: "Train ResNet50 classification model"
+
+  # Stage 5: Train YOLO Model
+  train_yolo:
+    cmd: python src/training/train_yolo.py
+    deps:
+      - src/training/train_yolo.py
+      - data/yolo/
+      - configs/train_yolo.yaml
+    outs:
+      - models/yolo/
+    params:
+      - train.epochs
+      - train.batch_size
+      - train.learning_rate
+      - model.name
+    metrics:
+      - logs/mlflow/yolo/metrics.json
+    desc: "Train YOLO11m detection model"
+
+  # Stage 6: Evaluate ResNet Model
+  evaluate_resnet:
+    cmd: python src/eval/eval_resnet.py
+    deps:
+      - src/eval/eval_resnet.py
+      - src/utils/thresholding.py
+      - models/resnet/
+      - data/processed/merged_annotations.json
+    outs:
+      - outputs/evaluation/resnet_evaluation_test.json
+      - outputs/evaluation/resnet_evaluation_validation.json
+      - outputs/evaluation/resnet_evaluation_summary.json
+    desc: "Evaluate ResNet model performance"
+
+  # Stage 7: Evaluate YOLO Model
+  evaluate_yolo:
+    cmd: python src/eval/eval_yolo.py
+    deps:
+      - src/eval/eval_yolo.py
+      - models/yolo/
+      - data/yolo/
+    outs:
+      - outputs/evaluation/yolo_evaluation_results.json
+    desc: "Evaluate YOLO model performance"
+
+  # Stage 8: Tune Thresholds
+  tune_thresholds:
+    cmd: python -c "
+      from src.utils.thresholding import ThresholdOptimizer;
+      from omegaconf import OmegaConf;
+      cfg = OmegaConf.load('configs/config.yaml');
+      optimizer = ThresholdOptimizer(cfg);
+      optimizer.run_threshold_optimization()
+      "
+    deps:
+      - src/utils/thresholding.py
+      - outputs/evaluation/resnet_evaluation_validation.json
+    outs:
+      - outputs/evaluation/threshold_optimization_report.json
+      - outputs/evaluation/optimized_thresholds.json
+    desc: "Optimize classification thresholds using validation data"
+
+  # Stage 9: Compare Models
+  compare_models:
+    cmd: python src/eval/compare_models.py
+    deps:
+      - src/eval/compare_models.py
+      - outputs/evaluation/resnet_evaluation_test.json
+      - outputs/evaluation/yolo_evaluation_results.json
+    outs:
+      - outputs/evaluation/comparisons/overall_results_final.csv
+      - outputs/evaluation/comparisons/per_class_comparison.csv
+      - outputs/evaluation/comparisons/model_comparison.png
+      - outputs/evaluation/comparisons/per_class_comparison.png
+      - outputs/evaluation/comparisons/performance_summary.json
+    desc: "Compare model performances and generate visualizations"
+
+  # Stage 10: Generate Final Report
+  generate_report:
+    cmd: python -c "
+      import json;
+      import pandas as pd;
+      from pathlib import Path;
+      
+      # Load all evaluation results
+      eval_dir = Path('outputs/evaluation');
+      comparison_dir = eval_dir / 'comparisons';
+      
+      # Create final report
+      report = {
+        'pipeline_completed': True,
+        'models_evaluated': ['ResNet50', 'YOLO11m'],
+        'evaluation_files': [
+          str(eval_dir / 'resnet_evaluation_summary.json'),
+          str(eval_dir / 'yolo_evaluation_results.json'),
+          str(comparison_dir / 'performance_summary.json')
+        ],
+        'visualization_files': [
+          str(comparison_dir / 'model_comparison.png'),
+          str(comparison_dir / 'per_class_comparison.png')
+        ],
+        'final_results': str(comparison_dir / 'overall_results_final.csv')
+      };
+      
+      with open('outputs/final_report.json', 'w') as f:
+        json.dump(report, f, indent=2);
+      
+      print('=== COLLISION PARTS PREDICTION PIPELINE COMPLETED ===');
+      print(f'Final results: {comparison_dir / \"overall_results_final.csv\"}');
+      print(f'Performance summary: {comparison_dir / \"performance_summary.json\"}');
+      print(f'Model comparison plots: {comparison_dir}')
+      "
+    deps:
+      - outputs/evaluation/comparisons/overall_results_final.csv
+      - outputs/evaluation/comparisons/performance_summary.json
+    outs:
+      - outputs/final_report.json
+    desc: "Generate final pipeline report and summary"
+
+# Pipeline parameters
+params:
+  - configs/config.yaml
+  - configs/data.yaml
+  - configs/train_resnet.yaml
+  - configs/train_yolo.yaml
+
+# Metrics tracking
+metrics:
+  - logs/mlflow/
+
+# Data versioning
+artifacts:
+  model_artifacts:
+    path: models/
+    type: model
+    desc: "Trained model artifacts"
+  
+  evaluation_artifacts:
+    path: outputs/evaluation/
+    type: metric
+    desc: "Model evaluation results and metrics"
+  
+  data_artifacts:
+    path: data/processed/
+    type: data
+    desc: "Processed training data"
+
+# Remote storage configuration (optional)
+# remote:
+#   - name: s3remote
+#     url: s3://collision-parts-prediction/
+#   - name: azureremote
+#     url: azure://storageaccount/container/
+
+# Cache configuration
+cache:
+  type: disk
+  dir: .dvc/cache
+
+# Plots for visualization
+plots:
+  - outputs/evaluation/comparisons/model_comparison.png:
+      title: "Model Performance Comparison"
+      x_label: "Models"
+      y_label: "Performance Score"
+  
+  - outputs/evaluation/comparisons/per_class_comparison.png:
+      title: "Per-Class Performance Analysis"
+      x_label: "Metrics"
+      y_label: "Score"
+
+# Pipeline configuration
+pipeline:
+  name: "collision_parts_prediction"
+  description: "End-to-end ML pipeline for vehicle collision damage detection and classification"
+  version: "1.0.0"
+  
+  # Pipeline schedule (for automated runs)
+  # schedule:
+  #   cron: "0 2 * * 0"  # Weekly on Sunday at 2 AM
+  
+  # Pipeline notifications
+  # notifications:
+  #   slack:
+  #     webhook_url: ${SLACK_WEBHOOK_URL}
+  #   email:
+  #     recipients: ["team@company.com"]
+
+# Experiment tracking integration
+experiments:
+  mlflow:
+    tracking_uri: logs/mlflow
+    experiment_name: "collision_parts_prediction"
+    
+# Pipeline validation
+validation:
+  # Minimum performance thresholds
+  metrics:
+    resnet_f1_macro_min: 0.6
+    yolo_map50_min: 0.5
+    
+  # Data quality checks
+  data:
+    min_samples_per_class: 100
+    max_class_imbalance_ratio: 10.0
+    
+  # Model quality checks
+  models:
+    max_model_size_mb: 500
+    min_inference_fps: 5
+
+# Environment configuration
+environment:
+  python_version: "3.9"
+  requirements: requirements.txt
+  
+  # Docker configuration
+  docker:
+    image: "collision-parts-prediction:latest"
+    build_context: "."
+    dockerfile: "Dockerfile"
+
+# Debugging and monitoring
+monitoring:
+  log_level: "INFO"
+  log_file: "logs/pipeline.log"
+  
+  # Resource monitoring
+  resources:
+    cpu_limit: "8"
+    memory_limit: "16GB"
+    gpu_required: true
+    gpu_memory_min: "8GB"
+
+# Pipeline optimization
+optimization:
+  # Parallel execution where possible
+  parallel_stages: ["train_resnet", "train_yolo"]
+  
+  # Caching strategy
+  cache_strategy: "aggressive"
+  
+  # Early stopping criteria
+  early_stopping:
+    patience: 10
+    min_delta: 0.001

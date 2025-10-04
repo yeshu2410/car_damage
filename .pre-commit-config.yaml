@@ -1,0 +1,106 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-added-large-files
+        args: ['--maxkb=10000']  # 10MB limit
+      - id: check-merge-conflict
+      - id: debug-statements
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+
+  - repo: https://github.com/psf/black
+    rev: 23.11.0
+    hooks:
+      - id: black
+        language_version: python3
+        args: ['--line-length=100']
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: isort (python)
+        args: ['--profile', 'black', '--line-length=100']
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+
+  # Security checks
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.5
+    hooks:
+      - id: bandit
+        args: ['-r', 'src/']
+        exclude: tests/
+
+  # Testing with pytest
+  - repo: local
+    hooks:
+      - id: pytest-check
+        name: pytest-check
+        entry: python -m pytest
+        language: system
+        types: [python]
+        stages: [commit]
+        args: [
+          'tests/',
+          '-v',
+          '--tb=short',
+          '-x',  # Stop on first failure
+          '-m', 'not slow',  # Skip slow tests in pre-commit
+          '--maxfail=5',
+          '--durations=10'
+        ]
+        pass_filenames: false
+
+  # Coverage check
+  - repo: local
+    hooks:
+      - id: coverage-check
+        name: coverage-check
+        entry: python -m pytest
+        language: system
+        types: [python]
+        stages: [push]
+        args: [
+          'tests/',
+          '--cov=src',
+          '--cov-fail-under=70',  # Minimum 70% coverage
+          '--cov-report=term-missing',
+          '-m', 'not slow'
+        ]
+        pass_filenames: false
+
+  # Configuration validation
+  - repo: local
+    hooks:
+      - id: config-validation
+        name: config-validation
+        entry: python -c
+        language: system
+        args: [
+          "import yaml; import sys; [yaml.safe_load(open(f)) for f in sys.argv[1:]]"
+        ]
+        files: '\.ya?ml$'
+
+# CI/CD specific configurations
+ci:
+  autofix_commit_msg: |
+    [pre-commit.ci] auto fixes from pre-commit.com hooks
+    
+    for more information, see https://pre-commit.ci
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+  autoupdate_schedule: weekly
+  skip: [pytest-check, coverage-check]  # Skip heavy tests in CI pre-commit
+  submodules: false

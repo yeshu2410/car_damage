@@ -1,0 +1,75 @@
+# YOLO11m training configuration
+model:
+  name: yolo11m
+  pretrained: true
+  yaml_path: yolo11m.yaml
+
+# Training hyperparameters
+training:
+  epochs: 300
+  batch_size: 16
+  learning_rate: 0.01
+  weight_decay: 0.0005
+  momentum: 0.937
+  warmup_epochs: 3
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+
+# Image configuration
+image:
+  size: 640
+  channels: 3
+
+# Data augmentation
+augmentation:
+  hsv_h: 0.015  # Hue augmentation
+  hsv_s: 0.7    # Saturation augmentation
+  hsv_v: 0.4    # Value augmentation
+  degrees: 0.0  # Rotation degrees
+  translate: 0.1  # Translation fraction
+  scale: 0.5    # Scale fraction
+  shear: 0.0    # Shear degrees
+  perspective: 0.0  # Perspective fraction
+  flipud: 0.0   # Vertical flip probability
+  fliplr: 0.5   # Horizontal flip probability
+  mosaic: 1.0   # Mosaic probability
+  mixup: 0.1    # Mixup probability
+  copy_paste: 0.1  # Copy-paste probability
+
+# Loss configuration
+loss:
+  box_loss_gain: 0.05
+  cls_loss_gain: 0.5
+  dfl_loss_gain: 1.5
+  label_smoothing: 0.0
+
+# Optimizer
+optimizer:
+  type: SGD
+  lr: ${training.learning_rate}
+  momentum: ${training.momentum}
+  weight_decay: ${training.weight_decay}
+  nesterov: true
+
+# Learning rate scheduler
+scheduler:
+  type: cosine
+  lrf: 0.01  # Final learning rate fraction
+
+# Non-Maximum Suppression
+nms:
+  conf_threshold: 0.25
+  iou_threshold: 0.45
+  max_detections: 300
+
+# Validation
+validation:
+  frequency: 1  # Validate every epoch
+  save_json: true
+  save_hybrid: false
+
+# Model export
+export:
+  format: [onnx, torchscript]
+  optimize: true
+  simplify: true

@@ -1,0 +1,221 @@
+# Collision Correction Codes Mapping
+# Maps damage classes to correction codes and parts
+
+class_to_code:
+  no_damage: []
+  dent:
+    - CC_1103  # Body panel dent repair
+    - CC_1104  # Minor dent removal
+  paint_scratch:
+    - CC_1202  # Paint scratch repair
+    - CC_1203  # Touch-up paint
+    - CC_1204  # Panel repaint
+  rust:
+    - CC_1301  # Rust treatment
+    - CC_1302  # Rust prevention coating
+    - CC_1303  # Panel replacement due to rust
+  crack:
+    - CC_1401  # Crack repair
+    - CC_1402  # Structural crack fix
+    - CC_1403  # Windshield crack repair
+  broken_glass:
+    - CC_1501  # Windshield replacement
+    - CC_1502  # Side window replacement
+    - CC_1503  # Rear window replacement
+  bumper_damage:
+    - CC_1601  # Bumper repair
+    - CC_1602  # Bumper replacement
+    - CC_1603  # Bumper cover replacement
+  headlight_damage:
+    - CC_1701  # Headlight assembly replacement
+    - CC_1702  # Headlight lens replacement
+    - CC_1703  # Headlight bulb replacement
+  wheel_damage:
+    - CC_1801  # Wheel rim repair
+    - CC_1802  # Wheel replacement
+    - CC_1803  # Tire replacement
+  mirror_damage:
+    - CC_1901  # Side mirror replacement
+    - CC_1902  # Mirror glass replacement
+    - CC_1903  # Mirror housing repair
+
+code_to_parts:
+  CC_1103:
+    - "Fender Panel"
+    - "Fasteners Set"
+    - "Body Filler"
+    - "Primer"
+    - "Paint"
+  CC_1104:
+    - "Dent Removal Tools"
+    - "Touch-up Paint"
+    - "Polish"
+  CC_1202:
+    - "Scratch Remover"
+    - "Touch-up Paint Pen"
+    - "Clear Coat"
+    - "Polishing Compound"
+  CC_1203:
+    - "Touch-up Paint"
+    - "Fine Brush"
+    - "Clear Coat"
+  CC_1204:
+    - "Panel Paint"
+    - "Primer"
+    - "Clear Coat"
+    - "Masking Tape"
+    - "Spray Gun"
+  CC_1301:
+    - "Rust Converter"
+    - "Steel Wool"
+    - "Primer"
+    - "Paint"
+  CC_1302:
+    - "Rust Prevention Spray"
+    - "Protective Coating"
+    - "Undercoating"
+  CC_1303:
+    - "Replacement Panel"
+    - "Welding Materials"
+    - "Fasteners"
+    - "Primer"
+    - "Paint"
+  CC_1401:
+    - "Crack Repair Kit"
+    - "Epoxy Adhesive"
+    - "Reinforcement Strip"
+  CC_1402:
+    - "Structural Adhesive"
+    - "Metal Patch"
+    - "Welding Rod"
+    - "Primer"
+  CC_1403:
+    - "Windshield Repair Kit"
+    - "Resin"
+    - "Curing Strip"
+  CC_1501:
+    - "Windshield"
+    - "Windshield Sealant"
+    - "Trim Molding"
+    - "Installation Tools"
+  CC_1502:
+    - "Side Window Glass"
+    - "Window Regulator"
+    - "Weather Stripping"
+    - "Clips and Fasteners"
+  CC_1503:
+    - "Rear Window Glass"
+    - "Defogger Grid"
+    - "Sealant"
+    - "Trim Pieces"
+  CC_1601:
+    - "Bumper Repair Kit"
+    - "Plastic Welding Rod"
+    - "Sandpaper"
+    - "Primer"
+    - "Paint"
+  CC_1602:
+    - "Bumper Assembly"
+    - "Mounting Brackets"
+    - "Fasteners"
+    - "Clips"
+  CC_1603:
+    - "Bumper Cover"
+    - "Mounting Hardware"
+    - "Clips and Fasteners"
+  CC_1701:
+    - "Headlight Assembly"
+    - "Wiring Harness"
+    - "Mounting Hardware"
+    - "Bulbs"
+  CC_1702:
+    - "Headlight Lens"
+    - "Sealant"
+    - "Mounting Clips"
+  CC_1703:
+    - "Headlight Bulb"
+    - "Socket"
+    - "Wiring Connector"
+  CC_1801:
+    - "Wheel Rim"
+    - "Valve Stem"
+    - "Balancing Weights"
+  CC_1802:
+    - "Complete Wheel"
+    - "Tire"
+    - "Valve Stem"
+    - "Center Cap"
+  CC_1803:
+    - "Tire"
+    - "Valve Stem"
+    - "Balancing"
+  CC_1901:
+    - "Side Mirror Assembly"
+    - "Wiring Harness"
+    - "Mounting Hardware"
+  CC_1902:
+    - "Mirror Glass"
+    - "Adhesive Backing"
+    - "Heating Element"
+  CC_1903:
+    - "Mirror Housing"
+    - "Mounting Bracket"
+    - "Fasteners"
+
+# Cost estimates per correction code (in USD)
+code_to_cost:
+  CC_1103: 450.00
+  CC_1104: 125.00
+  CC_1202: 85.00
+  CC_1203: 25.00
+  CC_1204: 320.00
+  CC_1301: 180.00
+  CC_1302: 75.00
+  CC_1303: 850.00
+  CC_1401: 95.00
+  CC_1402: 480.00
+  CC_1403: 65.00
+  CC_1501: 380.00
+  CC_1502: 245.00
+  CC_1503: 320.00
+  CC_1601: 180.00
+  CC_1602: 520.00
+  CC_1603: 290.00
+  CC_1701: 340.00
+  CC_1702: 125.00
+  CC_1703: 45.00
+  CC_1801: 280.00
+  CC_1802: 450.00
+  CC_1803: 180.00
+  CC_1901: 195.00
+  CC_1902: 85.00
+  CC_1903: 125.00
+
+# Labor hours per correction code
+code_to_labor_hours:
+  CC_1103: 3.5
+  CC_1104: 1.0
+  CC_1202: 0.5
+  CC_1203: 0.25
+  CC_1204: 2.5
+  CC_1301: 1.5
+  CC_1302: 0.5
+  CC_1303: 6.0
+  CC_1401: 0.75
+  CC_1402: 4.0
+  CC_1403: 0.5
+  CC_1501: 2.5
+  CC_1502: 2.0
+  CC_1503: 2.5
+  CC_1601: 1.5
+  CC_1602: 3.0
+  CC_1603: 2.0
+  CC_1701: 2.0
+  CC_1702: 1.0
+  CC_1703: 0.25
+  CC_1801: 2.0
+  CC_1802: 3.0
+  CC_1803: 1.0
+  CC_1901: 1.5
+  CC_1902: 0.75
+  CC_1903: 1.0

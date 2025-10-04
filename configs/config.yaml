@@ -1,0 +1,30 @@
+defaults:
+  - data: data
+  - train: resnet50
+  - _self_
+
+# Global configuration
+seed: 42
+device: auto  # auto, cuda, cpu
+experiment_name: collision_parts_prediction
+log_level: INFO
+
+# Hydra configuration
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d_%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra:job.num}
+
+# MLflow tracking
+mlflow:
+  tracking_uri: ${oc.env:MLFLOW_TRACKING_URI,sqlite:///mlflow.db}
+  experiment_name: ${experiment_name}
+  run_name: ${now:%Y%m%d_%H%M%S}
+
+# Paths
+paths:
+  data_dir: ${oc.env:DATA_DIR,./data}
+  output_dir: ./outputs
+  log_dir: ./logs
