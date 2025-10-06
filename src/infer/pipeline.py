@@ -20,7 +20,7 @@ from ultralytics import YOLO
 from omegaconf import OmegaConf, DictConfig
 from loguru import logger
 
-from ..models.damage_net import DamageNet
+from ..models.resnet_endtoend import DamageNet
 from ..data.dataset import get_transforms
 
 
@@ -44,7 +44,7 @@ class InferencePipeline:
         # Initialize models
         self.resnet_model = None
         self.yolo_model = None
-        self.class_names = None
+        self.class_names = self.cfg.data.classes  # Set class names from config
         self.transforms = None
         
         # Performance tracking
@@ -84,6 +84,22 @@ class InferencePipeline:
     
     def load_models(self):
         """Load both ResNet and YOLO models."""
+        # Check for demo mode
+        demo_mode = getattr(self.cfg, 'demo_mode', False)
+        
+        if demo_mode:
+            logger.info("Running in demo mode - using mock models")
+            self.resnet_model = "mock_resnet_model"
+            self.yolo_model = "mock_yolo_model"
+            self.model_versions = {"resnet": "demo_v1", "yolo": "demo_v1"}
+            
+            # Set up transforms for demo mode
+            self.transforms = get_transforms(
+                image_size=self.cfg.data.image_size,
+                mode='test'
+            )
+            return
+        
         # Load ResNet model
         if self.resnet_model_path.exists():
             logger.info(f"Loading ResNet model from {self.resnet_model_path}")
@@ -252,6 +268,12 @@ class InferencePipeline:
     
     def predict(self, image: Image.Image) -> Dict[str, Any]:
         """Run complete inference pipeline on an image."""
+        # Check for demo mode
+        demo_mode = getattr(self.cfg, 'demo_mode', False)
+        
+        if demo_mode:
+            return self._demo_predict(image)
+        
         if self.resnet_model is None or self.yolo_model is None:
             raise RuntimeError("Models not loaded. Call load_models() first.")
         
@@ -346,6 +368,58 @@ class InferencePipeline:
                 logger.error(f"Warmup {i+1} failed: {e}")
         
         logger.info("Model warmup completed")
+    
+    def _demo_predict(self, image: Image.Image) -> Dict[str, Any]:
+        """Demo prediction with mock results."""
+        import random
+        
+        # Simulate realistic processing times
+        resnet_time = random.uniform(0.02, 0.08)
+        yolo_time = random.uniform(0.01, 0.05)
+        fusion_time = random.uniform(0.001, 0.005)
+        total_time = resnet_time + yolo_time + fusion_time
+        
+        # Generate mock predictions
+        predictions = {}
+        predicted_classes = []
+        
+        for i, class_name in enumerate(self.class_names):
+            # Create realistic but random scores
+            resnet_score = random.uniform(0.1, 0.9)
+            yolo_score = random.uniform(0.1, 0.9)
+            fused_score = max(resnet_score, yolo_score)  # Simple max fusion for demo
+            threshold = self.thresholds.get(class_name, 0.5)
+            is_predicted = fused_score >= threshold
+            
+            if is_predicted:
+                predicted_classes.append(class_name)
+            
+            predictions[class_name] = {
+                "resnet_score": round(resnet_score, 3),
+                "yolo_score": round(yolo_score, 3),
+                "fused_score": round(fused_score, 3),
+                "threshold": threshold,
+                "predicted": is_predicted,
+                "fusion_method": "max_rule"
+            }
+        
+        return {
+            "predictions": predictions,
+            "predicted_classes": predicted_classes,
+            "model_versions": self.model_versions,
+            "inference_times": {
+                "resnet_time": round(resnet_time, 4),
+                "yolo_time": round(yolo_time, 4),
+                "fusion_time": round(fusion_time, 4),
+                "total_time": round(total_time, 4)
+            },
+            "image_info": {
+                "size": image.size,
+                "mode": image.mode
+            },
+            "pipeline_version": "1.0.0-demo",
+            "timestamp": time.time()
+        }
 
 
 def create_pipeline(config_path: str = "configs/config.yaml") -> InferencePipeline:

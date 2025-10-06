@@ -173,7 +173,10 @@ class CollisionPartsDataset(Dataset):
                 # Apply transforms
                 image = self.transform(img)
         except Exception as e:
-            raise RuntimeError(f"Error loading image {filename}: {e}")
+            # Log the error but skip this sample instead of crashing
+            print(f"Warning: Skipping corrupted image {filename}: {e}")
+            # Return a random valid sample instead
+            return self.__getitem__((idx + 1) % len(self.samples))
         
         # Create multi-hot target vector
         target = self._create_multi_hot_vector(annotation)

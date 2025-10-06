@@ -62,8 +62,14 @@ class ModelTrainer:
         self.best_val_f1 = 0.0
         self.best_thresholds = None
         self.training_history = {
-            "train_loss": [], "val_loss": [], "val_f1_micro": [], 
-            "val_f1_macro": [], "val_hamming_loss": [], "val_exact_match": []
+            "train_loss": [], 
+            "val_loss": [], 
+            "val_f1_micro": [], 
+            "val_f1_macro": [], 
+            "val_hamming_loss": [], 
+            "val_exact_match": [],
+            "val_precision_micro": [],
+            "val_recall_micro": []
         }
     
     def _get_device(self) -> torch.device:
@@ -237,8 +243,23 @@ class ModelTrainer:
         avg_epoch_loss = total_loss / num_batches
         return avg_epoch_loss
     
-    def validate_epoch(self) -> Dict[str, float]:
+    def validate_epoch(self) -> Tuple[Dict[str, float], np.ndarray]:
         """Validate for one epoch."""
+        # Handle empty validation set
+        if len(self.val_loader.dataset) == 0:
+            logger.warning("No validation samples available. Skipping validation.")
+            empty_metrics = {
+                "val_loss": 0.0,
+                "val_f1_micro": 0.0,
+                "val_f1_macro": 0.0,
+                "val_hamming_loss": 0.0,
+                "val_exact_match": 0.0,
+                "val_precision_micro": 0.0,
+                "val_recall_micro": 0.0
+            }
+            empty_thresholds = np.full(self.cfg.data.num_classes, 0.5)
+            return empty_metrics, empty_thresholds
+        
         self.model.eval()
         total_loss = 0.0
         all_predictions = []
@@ -259,6 +280,18 @@ class ModelTrainer:
                 all_targets.append(targets.cpu().numpy())
                 
                 total_loss += loss.item()
+        
+        # Calculate metrics only if we have predictions
+        if not all_predictions:
+            logger.warning("No predictions collected during validation.")
+            return {
+                "val_loss": 0.0,
+                "val_accuracy": 0.0,
+                "val_f1_macro": 0.0,
+                "val_f1_micro": 0.0,
+                "val_precision": 0.0,
+                "val_recall": 0.0
+            }
         
         # Calculate metrics
         all_predictions = np.vstack(all_predictions)

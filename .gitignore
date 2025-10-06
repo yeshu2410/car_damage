@@ -117,20 +117,47 @@ dmypy.json
 *.h5
 *.onnx
 *.trt
+*.pt
+*.pth
+*.weights
+best*.pt
 
-# Data
+# Data (exclude large files)
 data/raw/*
-data/processed/*
+data/artifacts/*
 !data/raw/.gitkeep
-!data/processed/.gitkeep
+!data/artifacts/.gitkeep
+
+# Keep only splits, not full annotations
+data/processed/yolo/batch_output/annotations_*.json
+!data/processed/yolo/batch_output/splits/
+
+# Exclude images (too large)
+data/processed/yolo/images/
+data/processed/yolo/images_2500/
+data/test_batch/
+data/labelme/
 
 # Artifacts
-data/artifacts/*
-!data/artifacts/.gitkeep
 models/
 logs/
 runs/
 mlruns/
+outputs/
+mlflow.db
+
+# Virtual environment
+collision_parts_env/
+
+# Kaggle credentials
+kaggle.json
+
+# Working directory experiments
+working/damaged_cars/
+working/.webdriver_cache/
+working/clip_text_features.pt
+working/best*.pt
+working/partdetection*.pt
 
 # DVC
 .dvc/tmp

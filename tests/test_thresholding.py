@@ -6,7 +6,7 @@ import pytest
 import numpy as np
 from typing import Dict, List, Tuple
 
-from conftest import assert_valid_thresholds, TEST_CLASSES
+from .conftest import assert_valid_thresholds, TEST_CLASSES
 
 
 class TestThresholdOptimization:

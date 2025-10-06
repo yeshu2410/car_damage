@@ -10,7 +10,7 @@ from typing import Dict, Any
 
 from omegaconf import OmegaConf
 
-from conftest import (
+from .conftest import (
     assert_valid_json_file, assert_valid_via_format, 
     TEST_CLASSES, TEST_IMAGE_SIZE
 )

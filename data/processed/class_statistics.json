@@ -1,0 +1,12 @@
+{
+  "total_images": 16621,
+  "total_classes": 2,
+  "class_counts": {
+    "dent": 30046,
+    "no_damage": 5000
+  },
+  "valid_classes": [
+    "dent",
+    "no_damage"
+  ]
+}

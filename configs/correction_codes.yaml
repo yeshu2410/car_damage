@@ -1,6 +1,45 @@
 # Collision Correction Codes Mapping
 # Maps damage classes to correction codes and parts
 
+damage_types:
+  no_damage: []
+  dent:
+    - CC_1103  # Body panel dent repair
+    - CC_1104  # Minor dent removal
+  paint_scratch:
+    - CC_1202  # Paint scratch repair
+    - CC_1203  # Touch-up paint
+    - CC_1204  # Panel repaint
+  rust:
+    - CC_1301  # Rust treatment
+    - CC_1302  # Rust prevention coating
+    - CC_1303  # Panel replacement due to rust
+  crack:
+    - CC_1401  # Crack repair
+    - CC_1402  # Structural crack fix
+    - CC_1403  # Windshield crack repair
+  broken_glass:
+    - CC_1501  # Windshield replacement
+    - CC_1502  # Side window replacement
+    - CC_1503  # Rear window replacement
+  bumper_damage:
+    - CC_1601  # Bumper repair
+    - CC_1602  # Bumper replacement
+    - CC_1603  # Bumper cover replacement
+  headlight_damage:
+    - CC_1701  # Headlight assembly replacement
+    - CC_1702  # Headlight lens replacement
+    - CC_1703  # Headlight bulb replacement
+  wheel_damage:
+    - CC_1801  # Wheel rim repair
+    - CC_1802  # Wheel replacement
+    - CC_1803  # Tire replacement
+  mirror_damage:
+    - CC_1901  # Side mirror replacement
+    - CC_1902  # Mirror glass replacement
+    - CC_1903  # Mirror housing repair
+
+# Legacy field for backward compatibility
 class_to_code:
   no_damage: []
   dent:
@@ -219,3 +258,24 @@ code_to_labor_hours:
   CC_1901: 1.5
   CC_1902: 0.75
   CC_1903: 1.0
+
+# Severity mapping for damage assessment
+severity_mapping:
+  no_damage: "none"
+  dent: "moderate"
+  paint_scratch: "minor"
+  rust: "moderate"
+  crack: "severe"
+  broken_glass: "severe"
+  bumper_damage: "moderate"
+  headlight_damage: "moderate"
+  wheel_damage: "severe"
+  mirror_damage: "minor"
+
+# Part categories for organization
+part_categories:
+  body_panels: ["fender", "door", "hood", "trunk", "roof"]
+  lighting: ["headlight", "taillight", "signal_light"]
+  glass: ["windshield", "side_window", "rear_window"]
+  exterior_trim: ["bumper", "mirror", "grille"]
+  wheels: ["rim", "tire", "hubcap"]

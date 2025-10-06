@@ -4,10 +4,8 @@ Trains YOLO model for collision parts object detection.
 """
 
 import json
-import os
 import shutil
 from pathlib import Path
-from typing import Dict, Optional
 
 import hydra
 import mlflow

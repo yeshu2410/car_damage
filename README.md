@@ -5,12 +5,27 @@ A comprehensive machine learning system for predicting damaged parts in vehicle 
 ## Overview
 
 This project implements a scalable proof-of-concept for collision damage assessment using:
-- **YOLO object detection** for part identification
-- **ResNet classification** for damage severity assessment
+- **Unified Transformer Model** (NEW!) - End-to-end detection and damage classification
+- **YOLO11m object detection** for part identification
+- **ResNet50 classification** for damage severity assessment
 - **MLflow** for experiment tracking and model management
 - **FastAPI** for high-performance inference serving
 - **Docker** for containerized deployment
 - **Kubernetes** for orchestration
+
+### 🆕 Unified Transformer Architecture
+
+The new **Unified Transformer Model** combines object detection and multi-task damage classification in a single end-to-end architecture:
+
+- **Vision Transformer backbone** for feature extraction
+- **DETR-style object detection** with learned queries
+- **Multi-task prediction heads**:
+  - Vehicle part detection (bounding boxes + class)
+  - Damage location classification (21 classes)
+  - Damage severity regression (0-10 scale)
+  - Damage type classification (11 classes)
+- **Single forward pass** for all predictions
+- **Unified loss function** balancing all tasks
 
 ## Project Structure
 
@@ -85,6 +100,29 @@ The system uses Hydra for configuration management. Edit files in `configs/` to 
 
 ### Training Models
 
+#### Option 1: Unified Transformer (Recommended - End-to-End)
+
+Train a single model for all tasks:
+
+```bash
+# Train unified transformer
+python src/training/train_unified_transformer.py
+
+# With custom config
+python src/training/train_unified_transformer.py \
+  train.model_size=base \
+  train.training.batch_size=8 \
+  train.training.learning_rate=0.0001
+```
+
+**Model sizes:**
+- `tiny`: 384 dim, 4 layers, ~50M params
+- `small`: 512 dim, 6 layers, ~90M params  
+- `base`: 768 dim, 6 layers, ~150M params (default)
+- `large`: 1024 dim, 12 layers, ~300M params
+
+#### Option 2: Separate Models (Original Pipeline)
+
 1. **Prepare data:**
    ```bash
    python src/data/prepare_data.py
@@ -92,15 +130,50 @@ The system uses Hydra for configuration management. Edit files in `configs/` to 
 
 2. **Train YOLO detection model:**
    ```bash
-   python src/train.py experiment=yolo_detection
+   python src/training/train_yolo.py
    ```
 
 3. **Train ResNet classification model:**
    ```bash
-   python src/train.py experiment=resnet_classification
+   python src/training/train_resnet.py
    ```
 
-### Evaluation
+### Inference
+
+#### Unified Transformer Inference
+
+Single-model inference with all predictions:
+
+```bash
+# Basic inference
+python src/infer/unified_transformer_inference.py \
+  --model models/unified_transformer_best.pth \
+  --image test_images/damaged_car.jpg \
+  --report
+
+# Save JSON output
+python src/infer/unified_transformer_inference.py \
+  --model models/unified_transformer_best.pth \
+  --image test_images/damaged_car.jpg \
+  --output predictions.json \
+  --conf 0.5
+
+# Use GPU
+python src/infer/unified_transformer_inference.py \
+  --model models/unified_transformer_best.pth \
+  --image test_images/damaged_car.jpg \
+  --device cuda \
+  --report
+```
+
+**Output includes:**
+- Bounding boxes for detected damage
+- Vehicle part classification
+- Damage location (21 categories)
+- Damage severity (0-10 scale)
+- Damage type (scratch, dent, etc.)
+
+#### Traditional Pipeline Inference
 
 ```bash
 python src/evaluate.py model_path=models/best_model.pth

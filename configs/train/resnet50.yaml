@@ -15,20 +15,20 @@ training:
 
 # Loss function
 loss:
-  type: bce_with_logits  # binary cross-entropy for multi-label
+  type: bce  # binary cross-entropy for multi-label
   pos_weight: null  # Auto-calculate based on class distribution
 
 # Optimizer
 optimizer:
   type: adam
-  lr: ${training.learning_rate}
-  weight_decay: ${training.weight_decay}
+  lr: ${train.training.learning_rate}
+  weight_decay: ${train.training.weight_decay}
   betas: [0.9, 0.999]
 
 # Learning rate scheduler
 scheduler:
   type: cosine_annealing
-  T_max: ${training.epochs}
+  T_max: ${train.training.epochs}
   eta_min: 1e-6
 
 # Data augmentation

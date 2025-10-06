@@ -11,7 +11,7 @@ from typing import Dict, Any
 from fastapi.testclient import TestClient
 from PIL import Image
 
-from conftest import TEST_CLASSES, TEST_IMAGE_SIZE
+from .conftest import TEST_CLASSES, TEST_IMAGE_SIZE
 
 
 @pytest.fixture

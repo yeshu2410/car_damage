@@ -1,0 +1,2713 @@
+{
+  "info": {
+    "description": "Collision Parts Dataset with Damage Annotations",
+    "version": "1.0",
+    "year": 2025,
+    "date_created": "2025-10-04T16:19:29.441595"
+  },
+  "licenses": [],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "01012020_172204image853193.jpg",
+      "width": 800,
+      "height": 600,
+      "date_captured": "2025-10-04T16:19:47.656785"
+    },
+    {
+      "id": 2,
+      "file_name": "01012020_172204image891741.jpg",
+      "width": 800,
+      "height": 600,
+      "date_captured": "2025-10-04T17:17:41.402234"
+    },
+    {
+      "id": 3,
+      "file_name": "01012020_172251image12370.jpg",
+      "width": 800,
+      "height": 600,
+      "date_captured": "2025-10-04T17:32:19.176441"
+    },
+    {
+      "id": 4,
+      "file_name": "01022020_083952image768902.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:35:28.420795"
+    },
+    {
+      "id": 5,
+      "file_name": "01022020_102246image365727.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:36:52.071555"
+    },
+    {
+      "id": 6,
+      "file_name": "01022020_102909image891067.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:36:59.649329"
+    },
+    {
+      "id": 7,
+      "file_name": "01022020_102910image826484.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:37:36.848633"
+    },
+    {
+      "id": 8,
+      "file_name": "01022020_102915image195873.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:38:05.584126"
+    },
+    {
+      "id": 9,
+      "file_name": "01022020_103924image583913.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:38:08.066098"
+    },
+    {
+      "id": 10,
+      "file_name": "01022020_104457image330512.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:40:02.735729"
+    },
+    {
+      "id": 11,
+      "file_name": "01022020_104503image975717.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:40:16.803734"
+    },
+    {
+      "id": 12,
+      "file_name": "01022020_104512image856272.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:41:07.756509"
+    },
+    {
+      "id": 13,
+      "file_name": "01022020_153346image398811.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:41:09.303997"
+    },
+    {
+      "id": 14,
+      "file_name": "01022021_152725image672832.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:41:33.415348"
+    },
+    {
+      "id": 15,
+      "file_name": "01022021_152729image798820.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:41:59.133703"
+    },
+    {
+      "id": 16,
+      "file_name": "01022021_152737image952852.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:42:01.015466"
+    },
+    {
+      "id": 17,
+      "file_name": "01022021_152754image439994.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:42:02.109331"
+    },
+    {
+      "id": 18,
+      "file_name": "01022021_152758image967897.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:42:03.264811"
+    },
+    {
+      "id": 19,
+      "file_name": "01042020_091440image496933.jpg",
+      "width": 800,
+      "height": 600,
+      "date_captured": "2025-10-04T17:42:03.810235"
+    },
+    {
+      "id": 20,
+      "file_name": "01062020_140753image325319.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T17:42:39.781286"
+    },
+    {
+      "id": 21,
+      "file_name": "01092020_102550image198263.jpg",
+      "width": 800,
+      "height": 600,
+      "date_captured": "2025-10-04T17:44:47.053492"
+    },
+    {
+      "id": 22,
+      "file_name": "01102020_083311image589561.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:45:22.737204"
+    },
+    {
+      "id": 23,
+      "file_name": "01102020_083312image690016.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:45:56.551505"
+    },
+    {
+      "id": 24,
+      "file_name": "01102020_083317image942666.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T17:45:58.936641"
+    },
+    {
+      "id": 25,
+      "file_name": "01102020_083411image919264.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:20:28.142742"
+    },
+    {
+      "id": 26,
+      "file_name": "01102020_084614image405851.jpg",
+      "width": 1066,
+      "height": 600,
+      "date_captured": "2025-10-04T19:21:47.361872"
+    },
+    {
+      "id": 27,
+      "file_name": "01102020_090113image322914.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:22:30.028566"
+    },
+    {
+      "id": 28,
+      "file_name": "01102020_090118image320747.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:22:55.079187"
+    },
+    {
+      "id": 29,
+      "file_name": "01102020_092819image267610.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:22:56.004463"
+    },
+    {
+      "id": 30,
+      "file_name": "01102020_093303image200692.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:22:56.635130"
+    },
+    {
+      "id": 31,
+      "file_name": "01102020_093340image593070.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:22:57.286793"
+    },
+    {
+      "id": 32,
+      "file_name": "01102020_093350image894874.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:22:57.971217"
+    },
+    {
+      "id": 33,
+      "file_name": "01102020_093402image379364.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:22:58.579676"
+    },
+    {
+      "id": 34,
+      "file_name": "01102020_101502image226556.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:22:59.180972"
+    },
+    {
+      "id": 35,
+      "file_name": "01102020_101505image297414.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:22:59.854640"
+    },
+    {
+      "id": 36,
+      "file_name": "01102020_101603image435142.jpg",
+      "width": 800,
+      "height": 600,
+      "date_captured": "2025-10-04T19:23:01.323321"
+    },
+    {
+      "id": 37,
+      "file_name": "01102020_101654image809221.jpg",
+      "width": 800,
+      "height": 600,
+      "date_captured": "2025-10-04T19:23:02.249806"
+    },
+    {
+      "id": 38,
+      "file_name": "01102020_103938image83964.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:23:03.110574"
+    },
+    {
+      "id": 39,
+      "file_name": "01102020_110055image775228.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:24:31.197580"
+    },
+    {
+      "id": 40,
+      "file_name": "01102020_110059image489580.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:24:32.503952"
+    },
+    {
+      "id": 41,
+      "file_name": "01102020_111011image227038.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:24:33.540935"
+    },
+    {
+      "id": 42,
+      "file_name": "01102020_111014image486727.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:24:34.444554"
+    },
+    {
+      "id": 43,
+      "file_name": "01102020_111019image24047.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:24:35.258607"
+    },
+    {
+      "id": 44,
+      "file_name": "01102020_111038image291215.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:24:35.981257"
+    },
+    {
+      "id": 45,
+      "file_name": "01102020_111040image232649.jpg",
+      "width": 1632,
+      "height": 1224,
+      "date_captured": "2025-10-04T19:24:36.695159"
+    },
+    {
+      "id": 46,
+      "file_name": "01102020_122919image340726.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:24:37.947901"
+    },
+    {
+      "id": 47,
+      "file_name": "01102020_123054image87292.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:24:40.654836"
+    },
+    {
+      "id": 48,
+      "file_name": "01102020_123057image433319.jpg",
+      "width": 2016,
+      "height": 1512,
+      "date_captured": "2025-10-04T19:24:42.123075"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        1.0000000000000284,
+        0.9998999999999683,
+        446.0,
+        577.0002000000001
+      ],
+      "area": 257342.08920000002,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "fender_front_right",
+      "damage_severity": 5,
+      "damage_type": "broken"
+    },
+    {
+      "id": 2,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        389.0,
+        230.9997,
+        409.99999999999994,
+        70.0002
+      ],
+      "area": 28700.082,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 3,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        440.0,
+        405.00030000000004,
+        298.0,
+        106.9998
+      ],
+      "area": 31885.9404,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "other",
+      "damage_severity": 1,
+      "damage_type": "other"
+    },
+    {
+      "id": 4,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        413.0,
+        340.0002,
+        25.0,
+        60.0
+      ],
+      "area": 1500.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 2,
+      "damage_type": "broken"
+    },
+    {
+      "id": 5,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        432.0,
+        358.00019999999995,
+        62.0,
+        87.0
+      ],
+      "area": 5394.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 6,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        447.0,
+        522.9999,
+        132.0,
+        52.99979999999999
+      ],
+      "area": 6995.973599999999,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 7,
+      "image_id": 2,
+      "category_id": 1,
+      "bbox": [
+        -1.0,
+        0.0003000000000383807,
+        800.0,
+        550.9997999999999
+      ],
+      "area": 440799.83999999997,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "fender_front_right",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 8,
+      "image_id": 2,
+      "category_id": 1,
+      "bbox": [
+        549.0,
+        309.99989999999997,
+        236.0,
+        178.99980000000002
+      ],
+      "area": 42243.95280000001,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 9,
+      "image_id": 2,
+      "category_id": 1,
+      "bbox": [
+        523.0,
+        261.0,
+        111.00000000000001,
+        174.0
+      ],
+      "area": 19314.000000000004,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 0,
+      "damage_type": "broken"
+    },
+    {
+      "id": 10,
+      "image_id": 2,
+      "category_id": 1,
+      "bbox": [
+        550.0,
+        470.99969999999996,
+        115.99999999999999,
+        70.0002
+      ],
+      "area": 8120.0232,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 11,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        212.0,
+        0.00029999999998153726,
+        499.0,
+        379.9998
+      ],
+      "area": 189619.9002,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 12,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        0.0,
+        0.0,
+        657.0,
+        420.0
+      ],
+      "area": 275940.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "fender_front_right",
+      "damage_severity": 0,
+      "damage_type": "broken"
+    },
+    {
+      "id": 13,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        165.0,
+        297.9999,
+        392.0,
+        298.9998
+      ],
+      "area": 117207.9216,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "fender_front_left",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 14,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        220.0,
+        309.9999,
+        285.0,
+        127.9998
+      ],
+      "area": 36479.943,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 15,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        188.0,
+        333.9999,
+        330.0,
+        265.0002
+      ],
+      "area": 87450.066,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 16,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        448.0,
+        358.9998,
+        352.0,
+        240.0
+      ],
+      "area": 84480.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 17,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        358.0,
+        108.0,
+        8.0,
+        6.0
+      ],
+      "area": 48.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 18,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        457.99999999999994,
+        12.000300000000001,
+        12.0,
+        4.9998000000000005
+      ],
+      "area": 59.997600000000006,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 19,
+      "image_id": 4,
+      "category_id": 1,
+      "bbox": [
+        224.00016,
+        822.9992399999999,
+        13.000512,
+        64.000512
+      ],
+      "area": 832.039424262144,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 20,
+      "image_id": 4,
+      "category_id": 1,
+      "bbox": [
+        228.99979200000007,
+        264.9996720000001,
+        1072.0004159999999,
+        716.999616
+      ],
+      "area": 768623.8866238401,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 4,
+      "damage_type": "crushed"
+    },
+    {
+      "id": 21,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [
+        852.999888,
+        551.99952,
+        664.000416,
+        672.0004799999999
+      ],
+      "area": 446208.5982721996,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 22,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [
+        65.00011199999994,
+        658.000368,
+        1104.0006720000001,
+        545.999472
+      ],
+      "area": 602783.7839996453,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 23,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [
+        304.0007999999999,
+        0.0,
+        1326.0,
+        539.999424
+      ],
+      "area": 716039.236224,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 24,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [
+        1040.99976,
+        475.0001280000001,
+        52.999199999999995,
+        78.999408
+      ],
+      "area": 4186.9054244736,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 25,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [
+        275.99976000000004,
+        792.000216,
+        484.99939199999994,
+        134.999856
+      ],
+      "area": 65474.84808008754,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 26,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [
+        984.000528,
+        687.999384,
+        25.999392,
+        40.00032
+      ],
+      "area": 1039.9839998054401,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 27,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        430.00017599999995,
+        255.000204,
+        63.000096,
+        57.000456
+      ],
+      "area": 3591.034200043776,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 28,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        1255.99944,
+        300.99996,
+        55.000032000000004,
+        86.999472
+      ],
+      "area": 4784.973743983104,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 29,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        1268.999952,
+        305.999388,
+        28.000224,
+        35.00028
+      ],
+      "area": 980.0156800627199,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 30,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        1308.000672,
+        336.999636,
+        24.000192000000002,
+        63.00050400000001
+      ],
+      "area": 1512.0241920967683,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 4,
+      "damage_type": "crushed"
+    },
+    {
+      "id": 31,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        260.9992320000001,
+        353.99977199999995,
+        1283.0000639999998,
+        699.9994800000001
+      ],
+      "area": 898099.3776399667,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 32,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        857.0007360000001,
+        325.00015199999996,
+        10.99968,
+        16.000128
+      ],
+      "area": 175.99628795904,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 33,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        650.000304,
+        251.00017200000002,
+        245.99952000000002,
+        79.999416
+      ],
+      "area": 19679.81793628032,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 34,
+      "image_id": 6,
+      "category_id": 1,
+      "bbox": [
+        665.000016,
+        165.00009599999998,
+        422.999712,
+        171.000144
+      ],
+      "area": 72333.01166395853,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 35,
+      "image_id": 7,
+      "category_id": 1,
+      "bbox": [
+        24.999792,
+        156.000024,
+        143.00073600000002,
+        78.999408
+      ],
+      "area": 11296.97348756429,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 4,
+      "damage_type": "crushed"
+    },
+    {
+      "id": 36,
+      "image_id": 7,
+      "category_id": 1,
+      "bbox": [
+        0.000816000000000372,
+        269.99971200000005,
+        199.999968,
+        438.99983999999995
+      ],
+      "area": 87799.9539520051,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 37,
+      "image_id": 7,
+      "category_id": 1,
+      "bbox": [
+        994.9993920000001,
+        209.000448,
+        93.999936,
+        40.00032
+      ],
+      "area": 3760.0275199795205,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 38,
+      "image_id": 7,
+      "category_id": 1,
+      "bbox": [
+        576.9993119999999,
+        178.0002,
+        205.000416,
+        60.00048
+      ],
+      "area": 12300.123360199681,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 39,
+      "image_id": 7,
+      "category_id": 1,
+      "bbox": [
+        586.0006079999999,
+        144.99993600000002,
+        365.000064,
+        88.999488
+      ],
+      "area": 32484.81881596723,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 40,
+      "image_id": 7,
+      "category_id": 1,
+      "bbox": [
+        179.00020799999993,
+        209.000448,
+        1324.9995840000001,
+        897.99984
+      ],
+      "area": 1189849.4144320667,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 41,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        0.0,
+        38.999700000000004,
+        107.00044799999999,
+        145.999944
+      ],
+      "area": 15622.05941597491,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 42,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        0.0,
+        190.00029599999996,
+        158.000448,
+        330.000192
+      ],
+      "area": 52140.178176086025,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 43,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        -0.000816000000000372,
+        561.9996,
+        52.000416,
+        42.000336
+      ],
+      "area": 2184.0349441397757,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 44,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        0.000816000000000372,
+        620.0006759999999,
+        119.99932799999999,
+        101.999592
+      ],
+      "area": 12239.882496274176,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 45,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        134.00107200000014,
+        112.99968000000001,
+        1429.9992,
+        1107.000288
+      ],
+      "area": 1583009.5262397695,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 4,
+      "damage_type": "broken"
+    },
+    {
+      "id": 46,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        1066.000368,
+        158.999436,
+        44.000352,
+        31.000248
+      ],
+      "area": 1364.021824087296,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 47,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        1007.0003040000001,
+        147.99996,
+        44.000352,
+        42.000336
+      ],
+      "area": 1848.0295681182718,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 48,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        586.999392,
+        87.99948,
+        241.00070399999998,
+        74.000592
+      ],
+      "area": 17834.194768416768,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 49,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        623.000496,
+        57.000456000000014,
+        213.99926399999998,
+        82.99943999999999
+      ],
+      "area": 17761.819072412156,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 50,
+      "image_id": 8,
+      "category_id": 1,
+      "bbox": [
+        660.9999839999999,
+        40.00032,
+        143.99952,
+        48.000384000000004
+      ],
+      "area": 6912.03225581568,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 51,
+      "image_id": 9,
+      "category_id": 1,
+      "bbox": [
+        950.999616,
+        1.99962000000005,
+        1064.000448,
+        1229.000472
+      ],
+      "area": 1307657.0528002114,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 52,
+      "image_id": 9,
+      "category_id": 1,
+      "bbox": [
+        362.999952,
+        414.0007199999999,
+        150.00048,
+        396.999792
+      ],
+      "area": 59550.159359900164,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "door_front_right",
+      "damage_severity": 1,
+      "damage_type": "scratch"
+    },
+    {
+      "id": 53,
+      "image_id": 9,
+      "category_id": 1,
+      "bbox": [
+        376.000128,
+        47.99919599999998,
+        328.999104,
+        249.000696
+      ],
+      "area": 81921.00587937639,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "door_front_right",
+      "damage_severity": 0,
+      "damage_type": "dent"
+    },
+    {
+      "id": 54,
+      "image_id": 10,
+      "category_id": 1,
+      "bbox": [
+        792.999408,
+        523.0005120000001,
+        108.99964800000001,
+        90.99950399999999
+      ],
+      "area": 9918.913904174591,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 55,
+      "image_id": 10,
+      "category_id": 1,
+      "bbox": [
+        652.0011359999999,
+        2.000015999999988,
+        825.999264,
+        362.000448
+      ],
+      "area": 299012.1036156703,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 56,
+      "image_id": 10,
+      "category_id": 1,
+      "bbox": [
+        83.00025599999992,
+        340.000272,
+        1468.00032,
+        102.9996
+      ],
+      "area": 151203.445759872,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 57,
+      "image_id": 11,
+      "category_id": 1,
+      "bbox": [
+        693.0002400000001,
+        350.99974800000007,
+        868.000416,
+        309.000024
+      ],
+      "area": 268212.14937601,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 58,
+      "image_id": 11,
+      "category_id": 1,
+      "bbox": [
+        365.99966400000005,
+        2.000628000000006,
+        143.99952,
+        234.99943199999998
+      ],
+      "area": 33839.80540827264,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 59,
+      "image_id": 11,
+      "category_id": 1,
+      "bbox": [
+        1062.99912,
+        8.000064000000009,
+        449.000736,
+        247.99953599999998
+      ],
+      "area": 111351.97419165849,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 60,
+      "image_id": 12,
+      "category_id": 1,
+      "bbox": [
+        473.99971200000005,
+        574.9997040000001,
+        770.000448,
+        374.000544
+      ],
+      "area": 287980.5864322437,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 61,
+      "image_id": 12,
+      "category_id": 1,
+      "bbox": [
+        0.000816000000000372,
+        497.000304,
+        202.999584,
+        217.00051200000001
+      ],
+      "area": 44051.01366378701,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 62,
+      "image_id": 12,
+      "category_id": 1,
+      "bbox": [
+        886.00056,
+        453.000564,
+        97.999968,
+        95.999544
+      ],
+      "area": 9407.952240014592,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 63,
+      "image_id": 13,
+      "category_id": 1,
+      "bbox": [
+        570.00048,
+        0.0,
+        319.999296,
+        94.999536
+      ],
+      "area": 30399.78464032666,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 64,
+      "image_id": 13,
+      "category_id": 1,
+      "bbox": [
+        2.0000159999999596,
+        90.00010799999995,
+        1413.0002880000002,
+        1132.0004880000001
+      ],
+      "area": 1599517.0155601408,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "front_bumper",
+      "damage_severity": 4,
+      "damage_type": "crushed"
+    },
+    {
+      "id": 65,
+      "image_id": 14,
+      "category_id": 1,
+      "bbox": [
+        809.9995680000001,
+        401.000544,
+        1115.9991360000001,
+        351.99964800000004
+      ],
+      "area": 392831.3030403042,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "hood",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 66,
+      "image_id": 15,
+      "category_id": 1,
+      "bbox": [
+        463.9995359999999,
+        17.999604000000005,
+        1423.999584,
+        503.99949599999997
+      ],
+      "area": 717695.0726402096,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 67,
+      "image_id": 16,
+      "category_id": 1,
+      "bbox": [
+        771.0000479999999,
+        80.99935199999996,
+        1155.0006720000001,
+        446.000688
+      ],
+      "area": 515131.09435246245,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 68,
+      "image_id": 17,
+      "category_id": 1,
+      "bbox": [
+        179.99956799999995,
+        397.99998,
+        1233.999648,
+        417.99996
+      ],
+      "area": 515811.80350401404,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 69,
+      "image_id": 18,
+      "category_id": 1,
+      "bbox": [
+        249.99911999999995,
+        2.0003759999999886,
+        1529.0009280000002,
+        503.000064
+      ],
+      "area": 769087.5646400595,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 70,
+      "image_id": 19,
+      "category_id": 1,
+      "bbox": [
+        0.0,
+        -0.9998999999999967,
+        800.0,
+        481.0002
+      ],
+      "area": 384800.16000000003,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "windshield",
+      "damage_severity": 3,
+      "damage_type": "crack"
+    },
+    {
+      "id": 71,
+      "image_id": 20,
+      "category_id": 1,
+      "bbox": [
+        856.9999200000001,
+        975.999852,
+        49.0008,
+        31.000248
+      ],
+      "area": 1519.0369521983998,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 72,
+      "image_id": 20,
+      "category_id": 1,
+      "bbox": [
+        863.999568,
+        931.000104,
+        25.000608,
+        12.000096000000001
+      ],
+      "area": 300.00969605836804,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "fender_front_right",
+      "damage_severity": 3,
+      "damage_type": ""
+    },
+    {
+      "id": 73,
+      "image_id": 20,
+      "category_id": 1,
+      "bbox": [
+        891.0001919999999,
+        604.9999439999999,
+        131.999424,
+        146.999952
+      ],
+      "area": 19403.90899202765,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 74,
+      "image_id": 20,
+      "category_id": 1,
+      "bbox": [
+        933.999312,
+        820.00044,
+        33.000672,
+        22.000176
+      ],
+      "area": 726.020592118272,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "fender_front_right",
+      "damage_severity": 2,
+      "damage_type": "paint_damage"
+    },
+    {
+      "id": 75,
+      "image_id": 20,
+      "category_id": 1,
+      "bbox": [
+        456.99916799999994,
+        817.999812,
+        416.000064,
+        210.00045599999999
+      ],
+      "area": 87360.20313602917,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "fender_front_right",
+      "damage_severity": 1,
+      "damage_type": "paint_damage"
+    },
+    {
+      "id": 76,
+      "image_id": 20,
+      "category_id": 1,
+      "bbox": [
+        640.999824,
+        928.999476,
+        208.000032,
+        158.00004
+      ],
+      "area": 32864.01337600128,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 77,
+      "image_id": 21,
+      "category_id": 1,
+      "bbox": [
+        107.0,
+        243.99990000000003,
+        173.0,
+        157.00019999999998
+      ],
+      "area": 27161.034599999995,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 78,
+      "image_id": 21,
+      "category_id": 1,
+      "bbox": [
+        408.0,
+        255.9999,
+        48.0,
+        49.9998
+      ],
+      "area": 2399.9904,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 79,
+      "image_id": 21,
+      "category_id": 1,
+      "bbox": [
+        255.99999999999994,
+        18.0,
+        483.0,
+        501.0
+      ],
+      "area": 241983.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 80,
+      "image_id": 21,
+      "category_id": 1,
+      "bbox": [
+        168.0,
+        100.0002,
+        156.0,
+        213.0
+      ],
+      "area": 33228.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 81,
+      "image_id": 21,
+      "category_id": 1,
+      "bbox": [
+        313.0,
+        268.9998,
+        190.0,
+        102.00000000000001
+      ],
+      "area": 19380.000000000004,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 82,
+      "image_id": 21,
+      "category_id": 1,
+      "bbox": [
+        5.0,
+        40.99979999999999,
+        271.0,
+        213.0
+      ],
+      "area": 57723.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 83,
+      "image_id": 22,
+      "category_id": 1,
+      "bbox": [
+        340.000416,
+        497.99912399999994,
+        1318.0003199999999,
+        428.000328
+      ],
+      "area": 564104.5692641049,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "taillight",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 84,
+      "image_id": 23,
+      "category_id": 1,
+      "bbox": [
+        93.99902399999996,
+        362.0000159999999,
+        1913.000544,
+        740.0000160000001
+      ],
+      "area": 1415620.433168009,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 85,
+      "image_id": 23,
+      "category_id": 1,
+      "bbox": [
+        51.999696,
+        1258.999308,
+        162.99964799999998,
+        194.00018400000002
+      ],
+      "area": 31621.96170393523,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 86,
+      "image_id": 24,
+      "category_id": 1,
+      "bbox": [
+        846.999216,
+        1199.000124,
+        344.00016,
+        69.00012000000001
+      ],
+      "area": 23736.052320019204,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "rear_bumper",
+      "damage_severity": 1,
+      "damage_type": "scratch"
+    },
+    {
+      "id": 87,
+      "image_id": 24,
+      "category_id": 1,
+      "bbox": [
+        83.00073599999985,
+        1.999619999999993,
+        1764.9999360000002,
+        923.999832
+      ],
+      "area": 1630859.6443440109,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "rear_bumper",
+      "damage_severity": 0,
+      "damage_type": "scratch"
+    },
+    {
+      "id": 88,
+      "image_id": 24,
+      "category_id": 1,
+      "bbox": [
+        1144.0013760000002,
+        1216.999728,
+        264.999168,
+        159.99984
+      ],
+      "area": 42399.824480133124,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 89,
+      "image_id": 25,
+      "category_id": 1,
+      "bbox": [
+        1.999871999999982,
+        108.99932400000003,
+        2016.0,
+        463.000104
+      ],
+      "area": 933408.2096640001,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 90,
+      "image_id": 25,
+      "category_id": 1,
+      "bbox": [
+        464.00054399999993,
+        487.0000800000001,
+        826.999488,
+        207.99979199999999
+      ],
+      "area": 172015.7214881065,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 91,
+      "image_id": 25,
+      "category_id": 1,
+      "bbox": [
+        1030.000608,
+        925.000776,
+        200.999232,
+        63.999936
+      ],
+      "area": 12863.937984049153,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 92,
+      "image_id": 25,
+      "category_id": 1,
+      "bbox": [
+        1257.000192,
+        1136.9998079999998,
+        756.0,
+        245.999376
+      ],
+      "area": 185975.52825600002,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 93,
+      "image_id": 26,
+      "category_id": 1,
+      "bbox": [
+        159.000296,
+        108.00000000000003,
+        741.000052,
+        413.99999999999994
+      ],
+      "area": 306774.02152799995,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "mirror",
+      "damage_severity": 3,
+      "damage_type": "broken"
+    },
+    {
+      "id": 94,
+      "image_id": 27,
+      "category_id": 1,
+      "bbox": [
+        531.000288,
+        1215.99954,
+        71.999424,
+        106.999704
+      ],
+      "area": 7703.917056170496,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 95,
+      "image_id": 27,
+      "category_id": 1,
+      "bbox": [
+        103.00046399999997,
+        841.9995359999998,
+        777.000672,
+        670.0004640000001
+      ],
+      "area": 520590.8107683119,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 96,
+      "image_id": 27,
+      "category_id": 1,
+      "bbox": [
+        424.00008,
+        15.99998400000004,
+        901.0008,
+        1141.00056
+      ],
+      "area": 1028042.4173604479,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 97,
+      "image_id": 28,
+      "category_id": 1,
+      "bbox": [
+        631.9988639999999,
+        1095.000228,
+        84.00067200000001,
+        77.999544
+      ],
+      "area": 6552.014111693568,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 98,
+      "image_id": 28,
+      "category_id": 1,
+      "bbox": [
+        630.0,
+        627.0006960000001,
+        633.999744,
+        431.999568
+      ],
+      "area": 273887.6155201106,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 99,
+      "image_id": 28,
+      "category_id": 1,
+      "bbox": [
+        -0.001007999999956155,
+        525.0004200000001,
+        1731.000096,
+        984.99996
+      ],
+      "area": 1705035.025319996,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 100,
+      "image_id": 28,
+      "category_id": 1,
+      "bbox": [
+        1.9998720000000105,
+        1035.99972,
+        443.999808,
+        250.000128
+      ],
+      "area": 111000.00883197541,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 101,
+      "image_id": 29,
+      "category_id": 1,
+      "bbox": [
+        153.00129600000014,
+        306.99950400000006,
+        1805.9993279999999,
+        665.9997119999999
+      ],
+      "area": 1202795.0323201932,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 102,
+      "image_id": 30,
+      "category_id": 1,
+      "bbox": [
+        550.99992,
+        512.99982,
+        653.99952,
+        466.000056
+      ],
+      "area": 304763.8129439731,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 103,
+      "image_id": 31,
+      "category_id": 1,
+      "bbox": [
+        602.9995200000001,
+        599.9999040000001,
+        88.999488,
+        112.99968
+      ],
+      "area": 10056.91366416384,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 104,
+      "image_id": 31,
+      "category_id": 1,
+      "bbox": [
+        781.0001279999999,
+        482.99958000000004,
+        182.00064,
+        445.99989600000004
+      ],
+      "area": 81172.26651193344,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 105,
+      "image_id": 32,
+      "category_id": 1,
+      "bbox": [
+        1.9992000000000871,
+        -0.0006120000000464643,
+        1575.0007679999999,
+        1094.000184
+      ],
+      "area": 1723051.1299921412,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 106,
+      "image_id": 33,
+      "category_id": 1,
+      "bbox": [
+        667.0000319999999,
+        185.00025599999998,
+        257.999616,
+        183.00024
+      ],
+      "area": 47213.99164790784,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 107,
+      "image_id": 33,
+      "category_id": 1,
+      "bbox": [
+        811.9999680000001,
+        787.999572,
+        166.99929600000002,
+        123.99976799999999
+      ],
+      "area": 20707.873960163328,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 108,
+      "image_id": 33,
+      "category_id": 1,
+      "bbox": [
+        355.0008,
+        1.9994040000000268,
+        1132.99968,
+        1112.000328
+      ],
+      "area": 1259896.015783895,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 109,
+      "image_id": 33,
+      "category_id": 1,
+      "bbox": [
+        840.998976,
+        172.000764,
+        115.000512,
+        242.99949600000002
+      ],
+      "area": 27945.066455741955,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 110,
+      "image_id": 34,
+      "category_id": 1,
+      "bbox": [
+        1079.9994239999999,
+        638.000496,
+        129.999744,
+        186.000192
+      ],
+      "area": 24179.977343950846,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 111,
+      "image_id": 34,
+      "category_id": 1,
+      "bbox": [
+        946.9988639999999,
+        816.999372,
+        150.00048,
+        135.999864
+      ],
+      "area": 20400.04487993472,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 112,
+      "image_id": 34,
+      "category_id": 1,
+      "bbox": [
+        1084.000176,
+        632.000124,
+        523.0008,
+        378.999432
+      ],
+      "area": 198217.0061355456,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 113,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        870.999696,
+        581.999796,
+        46.999008,
+        28.000728000000002
+      ],
+      "area": 1316.0064392778243,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 114,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        823.0007520000001,
+        613.0003320000001,
+        87.00048,
+        220.00053599999998
+      ],
+      "area": 19140.15223225728,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 115,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        584.9998559999999,
+        883.999872,
+        549.999072,
+        228.00052800000003
+      ],
+      "area": 125400.07881551002,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 116,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        1096.000416,
+        947.000376,
+        123.000192,
+        34.999776
+      ],
+      "area": 4304.979167956992,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 117,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        869.0008320000001,
+        926.0002079999999,
+        74.99923199999999,
+        34.999776
+      ],
+      "area": 2624.9563201720316,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 118,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        1014.999552,
+        606.0005279999999,
+        121.00031999999999,
+        26.000352
+      ],
+      "area": 3146.0509121126397,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 119,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        1110.000528,
+        651.000672,
+        81.00086399999999,
+        21.9996
+      ],
+      "area": 1781.9866076544,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 120,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        1149.9989759999999,
+        720.999468,
+        52.000704,
+        18.00036
+      ],
+      "area": 936.03139225344,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 121,
+      "image_id": 35,
+      "category_id": 1,
+      "bbox": [
+        904.0006080000002,
+        606.000528,
+        255.99974400000002,
+        231.000336
+      ],
+      "area": 59136.02687991399,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 122,
+      "image_id": 36,
+      "category_id": 1,
+      "bbox": [
+        1.0,
+        20.99969999999999,
+        648.0,
+        268.0002
+      ],
+      "area": 173664.12960000001,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 123,
+      "image_id": 36,
+      "category_id": 1,
+      "bbox": [
+        610.0,
+        1.9998000000000076,
+        130.0,
+        231.0
+      ],
+      "area": 30030.0,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 124,
+      "image_id": 37,
+      "category_id": 1,
+      "bbox": [
+        1.0,
+        99.00029999999998,
+        628.0,
+        316.99980000000005
+      ],
+      "area": 199075.87440000003,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 125,
+      "image_id": 37,
+      "category_id": 1,
+      "bbox": [
+        615.0,
+        -0.00030000000000995897,
+        121.0,
+        376.0002
+      ],
+      "area": 45496.0242,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 126,
+      "image_id": 38,
+      "category_id": 1,
+      "bbox": [
+        834.9997440000001,
+        425.999736,
+        120.99974399999999,
+        207.000432
+      ],
+      "area": 25046.999279889405,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 127,
+      "image_id": 39,
+      "category_id": 1,
+      "bbox": [
+        930.9988799999999,
+        404.000352,
+        808.0007039999999,
+        332.99985599999997
+      ],
+      "area": 269064.1180798986,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 128,
+      "image_id": 40,
+      "category_id": 1,
+      "bbox": [
+        0.0,
+        368.999064,
+        2014.000128,
+        968.000544
+      ],
+      "area": 1949553.2195200694,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 129,
+      "image_id": 40,
+      "category_id": 1,
+      "bbox": [
+        968.000544,
+        253.000692,
+        490.000896,
+        128.999304
+      ],
+      "area": 63209.774543376385,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 130,
+      "image_id": 40,
+      "category_id": 1,
+      "bbox": [
+        355.00046399999997,
+        328.000428,
+        611.9991359999999,
+        87.99991200000001
+      ],
+      "area": 53855.87011207603,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 139,
+      "image_id": 48,
+      "category_id": 1,
+      "bbox": [
+        1.999871999999982,
+        3.9992400000001,
+        1753.000704,
+        1506.000384
+      ],
+      "area": 2640019.73337627,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 138,
+      "image_id": 47,
+      "category_id": 1,
+      "bbox": [
+        329.00112,
+        2.00037599999996,
+        1206.99936,
+        1506.000384
+      ],
+      "area": 1817741.4996477542,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 136,
+      "image_id": 46,
+      "category_id": 1,
+      "bbox": [
+        667.0006560000002,
+        152.99927999999994,
+        792.999648,
+        965.0007360000001
+      ],
+      "area": 765245.2439677409,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 137,
+      "image_id": 46,
+      "category_id": 1,
+      "bbox": [
+        1453.99968,
+        693.001008,
+        113.00083199999999,
+        104.999328
+      ],
+      "area": 11865.011423440896,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 135,
+      "image_id": 45,
+      "category_id": 1,
+      "bbox": [
+        1.9992000000000871,
+        -0.0006120000000464643,
+        1629.000384,
+        675.0005040000001
+      ],
+      "area": 1099576.0802161936,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 134,
+      "image_id": 44,
+      "category_id": 1,
+      "bbox": [
+        1.49980800000003,
+        0.0,
+        1632.0,
+        1103.000256
+      ],
+      "area": 1800096.417792,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 133,
+      "image_id": 43,
+      "category_id": 1,
+      "bbox": [
+        1.0004159999999729,
+        0.0,
+        1632.0,
+        994.999392
+      ],
+      "area": 1623839.0077439998,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 132,
+      "image_id": 42,
+      "category_id": 1,
+      "bbox": [
+        -1.9991999999999734,
+        0.0,
+        1632.0,
+        992.000592
+      ],
+      "area": 1618944.966144,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "",
+      "damage_severity": 0,
+      "damage_type": ""
+    },
+    {
+      "id": 131,
+      "image_id": 41,
+      "category_id": 1,
+      "bbox": [
+        189.99988799999994,
+        -0.0006119999999327774,
+        1437.0004800000002,
+        667.0004399999999
+      ],
+      "area": 958479.9524402112,
+      "iscrowd": 0,
+      "segmentation": [],
+      "damage_location": "mirror",
+      "damage_severity": 4,
+      "damage_type": "broken"
+    }
+  ],
+  "categories": []
+}

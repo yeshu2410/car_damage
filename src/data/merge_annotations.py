@@ -127,7 +127,12 @@ def merge_annotations(
 ) -> None:
     """Merge VEHiDe and no_damage annotations."""
     logger.info("Loading VEHiDe annotations")
-    vehide_data = load_json_annotations(vehide_file)
+    # Load converted VIA format annotations instead of raw VehiDE
+    vehide_via_file = Path("data/processed/vehide_via_annotations.json")
+    if vehide_via_file.exists():
+        vehide_data = load_json_annotations(vehide_via_file)
+    else:
+        vehide_data = load_json_annotations(vehide_file)
     
     logger.info("Loading no_damage annotations")
     no_damage_data = load_json_annotations(no_damage_file)

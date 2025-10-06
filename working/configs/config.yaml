@@ -1,0 +1,132 @@
+# Unified Transformer Configuration
+# Configuration for training and inference with the Unified Transformer model
+
+paths:
+  data_dir: "../data"
+  coco_annotations: "../data/annotations.json"
+  images_dir: "../data/images"
+  output_dir: "../outputs"
+  models_dir: "../models"
+  logs_dir: "../logs"
+  checkpoints_dir: "../checkpoints"
+
+dataset:
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  image_size: [640, 640]
+
+  # Damage attributes
+  damage_locations:
+    - front_bumper
+    - rear_bumper
+    - hood
+    - trunk
+    - door_front_left
+    - door_front_right
+    - door_rear_left
+    - door_rear_right
+    - fender_front_left
+    - fender_front_right
+    - fender_rear_left
+    - fender_rear_right
+    - windshield
+    - rear_window
+    - headlight
+    - taillight
+    - mirror
+    - wheel
+    - roof
+    - side_panel
+    - other
+
+  damage_types:
+    - scratch
+    - dent
+    - crack
+    - broken
+    - shattered
+    - crushed
+    - paint_damage
+    - rust
+    - missing
+    - deformed
+    - other
+
+  # Severity 1-4 for humans (0-3 for CV)
+  max_severity: 4
+
+model:
+  # Model architecture
+  model_size: "base"  # tiny, small, base, large
+  embed_dim: 768
+  num_encoder_layers: 6
+  num_decoder_layers: 6
+  num_heads: 8
+  num_queries: 100
+  num_vehicle_parts: 11
+  num_damage_locations: 21
+  num_damage_types: 11
+  mlp_ratio: 4.0
+  dropout: 0.1
+
+  # Loss weights
+  bbox_loss_weight: 5.0
+  class_loss_weight: 1.0
+  location_loss_weight: 0.5
+  severity_loss_weight: 0.3
+  type_loss_weight: 0.5
+
+training:
+  epochs: 100
+  batch_size: 8
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  warmup_epochs: 10
+  gradient_clip: 1.0
+
+  optimizer: "adamw"
+  scheduler: "cosine"
+  mixed_precision: true
+
+  early_stopping_patience: 15
+  log_interval: 10
+  save_interval: 10
+
+  device: "cuda"  # or "cpu"
+  workers: 4
+
+evaluation:
+  metrics:
+    - bbox_mAP
+    - class_accuracy
+    - location_f1
+    - severity_mae
+    - type_f1
+
+  conf_threshold: 0.5
+  iou_threshold: 0.5
+
+inference:
+  conf_threshold: 0.5
+  max_detections: 100
+  nms_threshold: 0.5
+
+augmentation:
+  enabled: true
+  transforms:
+    - RandomHorizontalFlip: 0.5
+    - RandomRotation: 15
+    - ColorJitter:
+        brightness: 0.2
+        contrast: 0.2
+        saturation: 0.2
+    - RandomResizedCrop:
+        size: [640, 640]
+        scale: [0.8, 1.0]
+
+logging:
+  experiment_name: "unified_transformer_collision_parts"
+  use_tensorboard: true
+  log_model: true
+  log_params: true

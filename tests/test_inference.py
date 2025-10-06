@@ -8,7 +8,7 @@ from PIL import Image
 import tempfile
 from pathlib import Path
 
-from conftest import TEST_CLASSES, TEST_IMAGE_SIZE, create_mock_resnet_model
+from .conftest import TEST_CLASSES, TEST_IMAGE_SIZE, create_mock_resnet_model
 
 
 class TestInferencePipeline:

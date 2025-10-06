@@ -1,5 +1,5 @@
 defaults:
-  - data: data
+  - data
   - train: resnet50
   - _self_
 
@@ -8,6 +8,47 @@ seed: 42
 device: auto  # auto, cuda, cpu
 experiment_name: collision_parts_prediction
 log_level: INFO
+demo_mode: false  # Set to true to run without actual model files
+
+# Data configuration (fallback for inference)
+data:
+  # Raw data paths
+  raw_data:
+    stanford_cars_dir: ${paths.data_dir}/raw/stanford_cars
+    vehide_annotations: ${paths.data_dir}/raw/vehide_annotations.json
+    vehide_images_dir: ${paths.data_dir}/raw/vehide_images
+  
+  # Processed data paths  
+  processed_data:
+    merged_annotations: ${paths.data_dir}/processed/merged_annotations.json
+    train_annotations: ${paths.data_dir}/processed/train_annotations.json
+    val_annotations: ${paths.data_dir}/processed/val_annotations.json
+    test_annotations: ${paths.data_dir}/processed/test_annotations.json
+    yolo_dir: ${paths.data_dir}/processed/yolo
+    features_dir: ${paths.data_dir}/processed/features
+
+  # Dataset configuration
+  image_size: 224
+  num_classes: 10
+  classes:
+    - no_damage
+    - dent  
+    - paint_scratch
+    - rust
+    - crack
+    - broken_glass
+    - bumper_damage
+    - headlight_damage
+    - wheel_damage
+    - mirror_damage
+
+  # Sampling configuration
+  no_damage_samples: 5000
+  split_seed: 42
+  split_ratios:
+    train: 0.7
+    val: 0.15
+    test: 0.15
 
 # Hydra configuration
 hydra:
@@ -26,5 +67,6 @@ mlflow:
 # Paths
 paths:
   data_dir: ${oc.env:DATA_DIR,./data}
+  models_dir: ${oc.env:MODELS_DIR,./models}
   output_dir: ./outputs
   log_dir: ./logs
