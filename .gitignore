@@ -128,9 +128,9 @@ data/artifacts/*
 !data/raw/.gitkeep
 !data/artifacts/.gitkeep
 
-# Keep only splits, not full annotations
-data/processed/yolo/batch_output/annotations_*.json
-!data/processed/yolo/batch_output/splits/
+# Keep annotation files (important for training)
+!data/processed/yolo/batch_output/annotations_2500*.json
+!data/processed/yolo/batch_output/splits/*.json
 
 # Exclude images (too large)
 data/processed/yolo/images/
